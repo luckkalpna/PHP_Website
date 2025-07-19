@@ -20,21 +20,21 @@
 
 // Connect db with PDO (PHP Data Objects)
 
-$host = "localhost";
-$username = "root";
-$password = NULL;
+// $host = "localhost";
+// $username = "root";
+// $password = NULL;
 
-try {
-  $conn =  new PDO("mysql:host=$host;dbname=college", $username, $password);
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  echo "Connected successfully to the database using PDO.";
-} catch (PDOException $err) {
-  echo "Connection failed: " .$err->getMessage();
-}
+// try {
+//   $conn =  new PDO("mysql:host=$host;dbname=college", $username, $password);
+//   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//   echo "Connected successfully to the database using PDO.";
+// } catch (PDOException $err) {
+//   echo "Connection failed: " .$err->getMessage();
+// }
 
-echo "<br/>";
-$result = $conn->query("SHOW TABLES");
-foreach ($result as$row) {
-  print_r($row);
-}
+// echo "<br/>";
+// $result = $conn->query("SHOW TABLES");
+// foreach ($result as$row) {
+//   print_r($row);
+// }
 ?>
