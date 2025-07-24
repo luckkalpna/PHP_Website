@@ -1,0 +1,1 @@
+<h2>This is view page</h2>
