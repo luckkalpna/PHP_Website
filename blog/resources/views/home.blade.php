@@ -1,5 +1,6 @@
 @include("common.header")
 <x-message-banner msg="User Login Sucessfully" />
-<h1>This is my about page</h1>
+<x-message-banner msg="User SignUp Sucessfully" />
+<h1>Hello Home Page...</h1>
 <a href="/">Welcome Page</a>
 @include("common.inner")

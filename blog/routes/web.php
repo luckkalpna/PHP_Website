@@ -12,7 +12,10 @@ Route::get('/home', function () {
 });
 
 Route::view("/about", "about");
+Route::view("userform", "user-form");
 
 Route::get("user", [UserController::class, 'getUser']);
 Route::get("user/{name}", [UserController::class, 'getUserName']);
-Route::get("admin", [UserController::class, 'adminLogin']);
+Route::get("admin-login", [UserController::class, 'adminLogin']);
+
+Route::post("adduser", [UserController::class, "addUser"]);
