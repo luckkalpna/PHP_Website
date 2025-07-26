@@ -41,6 +41,14 @@ class UserController extends Controller
       echo $req->city;
       echo "<br/>";
       echo $req->range;
+
+      $req->validate([
+        'username'=>'required | min:3 | max:20',
+        'email'=>'required | email',
+        'city'=>'required | max:20',
+        'skill'=>'required | max:2'
+      ]);
+
       // echo "Add user function called";
     }
 }

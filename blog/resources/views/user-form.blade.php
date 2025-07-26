@@ -1,16 +1,22 @@
 <div>
     <!-- Simplicity is an acquired taste. - Katharine Gerould -->
-    <h2>New User Added</h2>
+    <h2>Add New User</h2>
     <form action="adduser" method="post">
       @csrf
       <div>
         <input type="text" placeholder="Enter your name" name="username">
         <br>
+        <span style="color:red;">@error('username'){{$message}}@enderror</span>
+        <br>
         <br>
         <input type="text" placeholder="Enter your email" name="email">
         <br>
+        <span style="color:red;">@error('email'){{$message}}@enderror</span>
+        <br>
         <br>
         <input type="text" placeholder="Enter your city" name="city">
+        <br>
+        <span style="color:red;">@error('city'){{$message}}@enderror</span>
 
 
         <h5>User Skills</h5>
@@ -20,6 +26,8 @@
         <label for="node">Node</label>
         <input type="checkbox" name="skill[]" value="JavaScript" id="javascript">
         <label for="javascript">JavaScript</label>
+        <br>
+        <span style="color:red;">@error('skill'){{$message}}@enderror</span>
 
         <h5>Gender</h5>
         <input type="radio" name="gender" value="Male" id="male">
