@@ -19,3 +19,5 @@ Route::get("user/{name}", [UserController::class, 'getUserName']);
 Route::get("admin-login", [UserController::class, 'adminLogin']);
 
 Route::post("adduser", [UserController::class, "addUser"]);
+
+Route::get("users", [UserController::class, "users"]);

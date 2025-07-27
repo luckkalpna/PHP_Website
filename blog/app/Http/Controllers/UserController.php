@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -50,5 +51,10 @@ class UserController extends Controller
       ]);
 
       // echo "Add user function called";
+    }
+
+    function users(){
+      // return "User funtion called.";
+      return DB::select("SELECT * FROM users");
     }
 }
